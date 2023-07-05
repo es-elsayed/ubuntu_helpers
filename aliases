@@ -9,8 +9,8 @@ alias gl="git pull"
 alias all-permission="sudo chmod -R 777"
 alias art="php artisan"
 
-#delete local merged branches
-alias del_lmb="git branch --merged | grep -v \* | xargs git branch -D"
+#delete local branches except stage and your current branch
+alias del_lmb="git branch | grep -v "stage" | grep -v ^* | xargs git branch -D"
 
 #switch between php versions
 alias sw_php="sudo update-alternatives --config php"
