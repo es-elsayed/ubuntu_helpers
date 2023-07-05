@@ -10,7 +10,7 @@ alias all-permission="sudo chmod -R 777"
 alias art="php artisan"
 
 #delete local branches except stage and your current branch
-alias del_lmb="git branch | grep -vE "(stage|\*)" | xargs git branch -D"
+alias del_lb="git branch | grep -vE '(stage|\*)' | xargs git branch -D"
 
 #switch between php versions
 alias sw_php="sudo update-alternatives --config php"
