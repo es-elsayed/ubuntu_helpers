@@ -1,16 +1,28 @@
-alias gaa="git add ."
-alias ga="git add"
-alias gcm="git commit -m"
-alias gco="git checkout"
-alias gb="git branch"
-alias gm="git merge"
+
 alias gp="git push"
 alias gl="git pull"
+alias gco="git checkout"
+alias gm="git merge"
+
+alias ga="git add"
+alias gaa="git add ."
+alias gcm="git commit -m"
+alias greset="git reset --soft HEAD^"
+
+alias gb="git branch"
+alias gbp="git push -u origin HEAD" # push currect branch with current updates
+alias gbdl="git branch | grep -vE '(stage|\*)' | xargs git branch -D"
+
 alias all-permission="sudo chmod -R 777"
+
 alias art="php artisan"
+alias am="php artisan migrate"
+alias amr="php artisan migrate:rollback"
 
 #delete local branches except stage and your current branch
-alias del_lb="git branch | grep -vE '(stage|\*)' | xargs git branch -D"
 
 #switch between php versions
 alias sw_php="sudo update-alternatives --config php"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
